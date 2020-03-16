@@ -1,25 +1,20 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import React,{ useState } from 'react';
+import styled from 'styled-components'
+import HomePage from './Components/HomePage/HomePage'
+import { ItemProvider } from "./Components/Context/Context"
 
-function App() {
+const AppDiv = styled.div`
+  font-family: 'Open Sans Condensed';
+  font-weight: 700 !important;
+  background-color: #fff;
+`
+const App = () =>  {  
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <ItemProvider>
+      <AppDiv>
+        <HomePage />
+      </AppDiv>
+    </ItemProvider>
   );
 }
 
