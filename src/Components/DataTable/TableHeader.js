@@ -7,14 +7,23 @@ const TableHead = styled.thead`
   display: block;
   position: sticky;
   top : 0;
-  height: 25px;
+  height: 40px;
   z-index: 10;
+  tr {
+    td {
+      height: 30px;
+      font-size: 7pt;
+      @media screen and (min-width: 996px) {
+         font-size: 10pt;
+      }
+    }
+  }
   &:first-child {
     td{
       font-weight: 700;
       background-color: rgb(168,175,247);
       color: white;
-      text-transform: uppercase;    
+      text-transform: capitalize;    
       &:first-child {
         left: 0;
         z-index: 100;

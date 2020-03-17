@@ -11,8 +11,8 @@ const P = styled.p`
 `
 
 const Div = styled.div`
-  margin: 0;
-  width: 100%;
+  margin: auto;
+  width: 80%;
   Button{
     margin-right: 25%;
     margin-left: 25%;
@@ -37,11 +37,11 @@ const Input =  styled.input`
 const Inputs = styled.div`
   display: flex;
   flex-wrap: wrap;
-  width: 300px;
-  height: 450px;
+  width: 80%;
+  height: 650px;
   border: 2px solid rgba(168,175,247, 0.8);
   border-radius: 10px;
-  margin: 10px;
+  margin: auto;
   padding: 25px;
   background-color: rgba(168,175,247, 0.8);
 `
@@ -49,7 +49,11 @@ const Inputs = styled.div`
 const OuterDiv = styled.div`
   display: flex;
   justify-content: center;
-  margin-top: 10%;
+  @media screen and (min-width: 996px) {
+    width: 40%;
+  }
+  width: 80%;
+  margin: auto;
   margin-bottom: 10%;
 `
 const InputField = () =>  {
@@ -59,23 +63,32 @@ const InputField = () =>  {
   const [age, setAge] = useState('');
   const [location, setLocation] = useState('');
   const [major, setMajor] = useState('');
+  const [fav, setFav] = useState('');
+  const [country, setCountry] = useState('');
 
   const state = useContext(ItemContext)
 
   const add = () => {
-    const item = {
-      'name': name,
-      'surname':surname,
-      'age':age,
-      'location':location,
-      'major':major,
+    if(name !== '' && surname !== '' && age !== '' 
+        && location !== '' && major !== '' && fav !== '' && country !== ''){
+      const item = {
+        'name': name,
+        'surname':surname,
+        'age':age,
+        'location':location,
+        'major':major,
+        'favorite frameWork':fav,
+        'country':country,
+      }
+      setName('')
+      setSurname('')
+      setAge('')
+      setLocation('')
+      setMajor('')
+      setFav('')
+      setCountry('')
+      state.addItem(item)
     }
-    setName('')
-    setSurname('')
-    setAge('')
-    setLocation('')
-    setMajor('')
-    state.addItem(item)
   }
 
   return (
@@ -98,8 +111,16 @@ const InputField = () =>  {
           <Input value={location} onChange={(e) => setLocation(e.target.value)} />
         </Div>
         <Div>
-          <P>Mojar</P>
+          <P>Major</P>
           <Input value={major} onChange={(e) => setMajor(e.target.value)} />
+        </Div>
+        <Div>
+          <P>Favorite framework</P>
+          <Input value={fav} onChange={(e) => setFav(e.target.value)} />
+        </Div>
+        <Div>
+          <P>Country</P>
+          <Input value={country} onChange={(e) => setCountry(e.target.value)} />
         </Div>
         <Div>
           <Button onClick={add} >Add</Button>

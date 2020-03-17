@@ -5,26 +5,24 @@ import TableRow from './TableRow'
 import TableBody from './TableBody'
 import TableCell from './TableCell'
 
-const OuterDiv = styled.div`
-  display: flex;
-  justify-content: center;
-`
-const InnerDiv = styled.div`
-  margin-top: 10%;
-  border: 2px solid rgba(168,175,247, 0.8);
-  border-radius: 5px;
-`
-  
+
 const DataTable = (props)  => {
+
+  const InnerDiv = styled.div`
+    margin-top: 10%;
+    margin-bottom: 10%;
+  `
   
   
   const Table = styled.table`
     border-collapse: separate;
-    width: ${props.width + 'px'};
+    border: 2px solid rgba(168,175,247, 0.8);
+    border-radius: 5px;
+    width: ${props.width.includes('%') ? props.width : props.width + 'px'};
+    margin: auto;
     display: block;
     overflow-x: scroll;
     overflow-y: scroll;
-    border-top: none;
     border-spacing: 0;
     letter-spacing: 1px;
     font-size: 1rem;
@@ -44,7 +42,7 @@ const DataTable = (props)  => {
       
     return props.items.map(item => {
       const keys = Object.keys(item)
-      return ( <TableRow>
+      return ( <TableRow leftColumnFixed={props.leftColumnFixed}>
                 {keys.map(key => {
                   return <TableCell text={item[key]} />
                 })}
@@ -53,24 +51,18 @@ const DataTable = (props)  => {
   }
 
   return (
-    <OuterDiv>
-      <div>
-        <InnerDiv>
-          <div>
-          <Table>
-            <TableHeader>
-              <TableRow>
-              {renderHeader()}
-              </TableRow>
-            </TableHeader>
-            <TableBody height={props.height} >
-            {renderItems()}
-            </TableBody>
-          </Table>
-          </div>
-        </InnerDiv>
-      </div>
-    </OuterDiv>
+    <InnerDiv>
+      <Table>
+        <TableHeader leftColumnFixed={props.leftColumnFixed} >
+          <TableRow leftColumnFixed={props.leftColumnFixed} >
+          {renderHeader()}
+          </TableRow>
+        </TableHeader>
+        <TableBody height={props.height} leftColumnFixed={props.leftColumnFixed} >
+        {renderItems()}
+        </TableBody>
+      </Table>
+    </InnerDiv>
   );
 }
 

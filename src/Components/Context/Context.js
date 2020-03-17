@@ -7,70 +7,90 @@ const initialState = {
       surname: 'Eryilmaz',
       age: '24',
       location: 'denizli',
-      major: 'computer science'
+      major: 'computer science',
+      'favorite frameWork': 'Gatsby',
+      Country: 'turkey'
     },
     {
       name: 'batin',
       surname: 'Eryilmaz',
       age: '24',
       location: 'denizli',
-      major: 'computer science computer science computer science computersciencecomputerscience'
+      major: 'computer science computer science computer science computersciencecomputerscience',
+      'favorite frameWork': 'Gatsby',
+      Country: 'turkey'
     },
     {
       name: 'batin',
       surname: 'Eryilmaz',
       age: '24',
       location: 'denizli',
-      major: 'computer science'
+      major: 'computer science',
+      'favorite frameWork': 'Gatsby',
+      Country: 'turkey'
     },
     {
       name: 'batin',
       surname: 'Eryilmaz',
       age: '24',
       location: 'denizli',
-      major: 'computer science'
+      major: 'computer science',
+      'favorite frameWork': 'Gatsby',
+      Country: 'turkey'
     },
     {
       name: 'batin',
       surname: 'Eryilmaz',
       age: '24',
       location: 'denizli',
-      major: 'computer science'
+      major: 'computer science',
+      'favorite frameWork': 'Gatsby',
+      Country: 'turkey'
     },
     {
       name: 'batin',
       surname: 'Eryilmaz',
       age: '24',
       location: 'denizli',
-      major: 'computer science'
+      major: 'computer science',
+      'favorite frameWork': 'Gatsby',
+      Country: 'turkey'
     },
     {
       name: 'batin',
       surname: 'Eryilmaz',
       age: '24',
       location: 'denizli',
-      major: 'computer science'
+      major: 'computer science',
+      'favorite frameWork': 'Gatsby',
+      Country: 'turkey'
     },
     {
       name: 'batin',
       surname: 'Eryilmaz',
       age: '24',
       location: 'denizli',
-      major: 'computer science'
+      major: 'computer science',
+      'favorite frameWork': 'Gatsby',
+      Country: 'turkey'
     },
     {
       name: 'batin',
       surname: 'Eryilmaz',
       age: '24',
       location: 'denizli',
-      major: 'computer science'
+      major: 'computer science',
+      'favorite frameWork': 'Gatsby',
+      Country: 'turkey'
     },
     {
       name: 'batin',
       surname: 'Eryilmaz',
       age: '24',
       location: 'denizli',
-      major: 'computer science'
+      major: 'computer science',
+      'favorite frameWork': 'Gatsby',
+      Country: 'turkey'
     }
   ]
 }

@@ -4,10 +4,13 @@ import styled from 'styled-components'
 const TableCell = (props)  => {
   
   const TableC = styled.td`    
-    width: 120px !important;
+    min-width: 10vh !important;
+    @media screen and (min-width: 996px) {
+      min-width: 15vh !important;
+      }
     border-bottom: 2px solid rgba(168,175,247, 0.8);
-    text-transform: capitalize;
     height: 25px;
+    text-transform: capitalize;
     text-align: center;
     font-weight: 400;
     z-index: auto;

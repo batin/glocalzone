@@ -6,7 +6,10 @@ const TableBody = ({children,height})  => {
   const TableB = styled.tbody`    
     display: inline-block;
     width: 100%;
-    
+    font-size: 8pt;
+    @media screen and (min-width: 996px) {
+      font-size: 10pt;
+    }
     height: ${height+'px'};
     z-index: -1;
     color: black;    
