@@ -6,18 +6,21 @@ const TableBody = ({children,height})  => {
   const TableB = styled.tbody`    
     display: inline-block;
     width: 100%;
-    font-size: 8pt;
+    font-size: 7pt;
     @media screen and (min-width: 996px) {
       font-size: 10pt;
     }
     height: ${height+'px'};
     z-index: -1;
-    color: black;    
+    color: black;
     &::-webkit-scrollbar {
       display: none;
     }
     &:last-child {
-        border: none;
+      border: none;
+    }
+    &:first-child {
+      border: none;
     }
     td {
       &:first-child {
@@ -26,7 +29,9 @@ const TableBody = ({children,height})  => {
         z-index: 5;
         height: 25px;
         left: 0;
-        background-color: #fff;
+        background-color: ${props => props.theme.main};
+        color: ${props => props.theme.second};
+        font-weight: 700;
         width: 100%;        
       }
     }

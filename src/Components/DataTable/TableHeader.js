@@ -6,8 +6,7 @@ const TableHead = styled.thead`
   text-align: center;
   display: block;
   position: sticky;
-  top : 0;
-  height: 40px;
+  top : 0;  
   z-index: 10;
   tr {
     td {
@@ -21,8 +20,8 @@ const TableHead = styled.thead`
   &:first-child {
     td{
       font-weight: 700;
-      background-color: rgb(168,175,247);
-      color: white;
+      background-color: ${props => props.theme.main};
+      color: ${props => props.theme.second};
       text-transform: capitalize;    
       &:first-child {
         left: 0;

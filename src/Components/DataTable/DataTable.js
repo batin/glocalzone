@@ -16,7 +16,7 @@ const DataTable = (props)  => {
   
   const Table = styled.table`
     border-collapse: separate;
-    border: 2px solid rgba(168,175,247, 0.8);
+    border: 2px solid ${props => props.theme.main};;
     border-radius: 5px;
     width: ${props.width.includes('%') ? props.width : props.width + 'px'};
     margin: auto;

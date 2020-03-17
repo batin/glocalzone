@@ -8,7 +8,7 @@ const TableCell = (props)  => {
     @media screen and (min-width: 996px) {
       min-width: 15vh !important;
       }
-    border-bottom: 2px solid rgba(168,175,247, 0.8);
+    border: 1px solid ${props => props.theme.main};
     height: 25px;
     text-transform: capitalize;
     text-align: center;
@@ -16,7 +16,8 @@ const TableCell = (props)  => {
     z-index: auto;
     overflow-wrap: break-word;
     word-break: break-word;
-    background-color: #fff;
+    background-color: ${props => props.theme.second};
+    color: ${props => props.theme.main};
   `
   return (
     <TableC>

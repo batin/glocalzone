@@ -3,7 +3,7 @@ import styled from 'styled-components'
 import Button from '../Button/Button'
 import { ItemContext } from "../Context/Context"
 const P = styled.p`
-  color: white;
+  color: ${props => props.theme.second};
   letter-spacing: 1px;
   font-family: 'Open Sans Condensed';
   font-weight: 700 !important;
@@ -14,24 +14,23 @@ const Div = styled.div`
   margin: auto;
   width: 80%;
   Button{
-    margin-right: 25%;
-    margin-left: 25%;
-    height: 30px;
+    height: 25px;
     margin-top: 5%;
   }
 `
 
 const Input =  styled.input`
   font-family: 'Open Sans Condensed';
-  color: black;
+  color: ${props => props.theme.main};
+  font-weight: bold;
   outline: none;
   letter-spacing: 1px;
   border: none;
   height: 25px;
   width: 95%;
   border-radius: 10px;
-  border: 2px solid rgba(168,175,247, 0.8);
   padding-left: 5%;
+  background-color: ${props => props.theme.second};
 `
 
 const Inputs = styled.div`
@@ -39,11 +38,10 @@ const Inputs = styled.div`
   flex-wrap: wrap;
   width: 80%;
   height: 650px;
-  border: 2px solid rgba(168,175,247, 0.8);
   border-radius: 10px;
   margin: auto;
   padding: 25px;
-  background-color: rgba(168,175,247, 0.8);
+  background-color: ${props => props.theme.main};
 `
 
 const OuterDiv = styled.div`

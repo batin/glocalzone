@@ -1,11 +1,12 @@
 body {
-  background-color: #fff;
   margin: 0;
   font-family: 'Open Sans Condensed', sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
-
+html {
+  background-color: ;    
+}
 code {
   font-family: 'Open Sans Condensed', sans-serif;
 }
