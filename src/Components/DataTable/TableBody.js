@@ -23,16 +23,16 @@ const TableBody = ({children,height})  => {
       border: none;
     }
     td {
+      width: 55vw;
       &:first-child {
         position: sticky;
-        width: 100%;
         z-index: 5;
         height: 25px;
         left: 0;
         background-color: ${props => props.theme.main};
         color: ${props => props.theme.second};
         font-weight: 700;
-        width: 100%;        
+        /* width: 100%;         */
       }
     }
   `

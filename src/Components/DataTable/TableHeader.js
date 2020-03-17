@@ -2,7 +2,7 @@ import React from 'react';
 import styled from 'styled-components'
 
 const TableHead = styled.thead`
-  width: 100%; 
+  /* width: 100%; */
   text-align: center;
   display: block;
   position: sticky;
@@ -22,12 +22,13 @@ const TableHead = styled.thead`
       font-weight: 700;
       background-color: ${props => props.theme.main};
       color: ${props => props.theme.second};
-      text-transform: capitalize;    
+      text-transform: capitalize;   
+      min-width: 35vw; 
       &:first-child {
         left: 0;
         z-index: 100;
         position: sticky;
-        width: 100%;
+        /* width: 100%; */
       }
     }
   }
